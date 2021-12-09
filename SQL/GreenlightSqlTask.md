@@ -1,5 +1,5 @@
 # Task Description :
-
+```sql:
 CREATE TABLE accounts
 (
 account_number int, 
@@ -10,7 +10,8 @@ registration_date_utc datetime,
 upfront_price int, 
 unlock_price int,
 product_name varchar(25));
-   
+```
+```sql:
 INSERT INTO accounts
     (account_number, group_name, country, account_status, registration_date_utc, upfront_price, unlock_price, product_name)
 VALUES
@@ -31,8 +32,8 @@ VALUES
     (3240645, 'SHS 60 Easy Buy Kakamega', 'Kenya', 'UNLOCKED', '2017-04-01 08:07:40', 1600, 11750, 'Sun King Home 60 Easy Buy'),
     (3477742, 'SHS 60 Easy Buy Bungoma', 'Kenya', 'UNLOCKED', '2017-04-01 08:22:40', 1600, 11750, 'Sun King Home 60 Easy Buy'),
     (3822343, 'SHS 60 Easy Buy Eldoret', 'Kenya', 'UNLOCKED', '2017-04-01 08:54:02', 1600, 11750, 'Sun King Home 60 Easy Buy')
-    
-    
+```   
+```sql:    
 CREATE TABLE payments
 (payment_id varchar(9),
 transaction_date datetime,
@@ -40,7 +41,8 @@ account_number int,
 group_name varchar(28), 
 amount int, 
 down_payment varchar(1));
-   
+```
+```sql:
 INSERT INTO payments
     (payment_id, transaction_date, account_number, group_name, amount, down_payment)
 VALUES
@@ -72,7 +74,7 @@ VALUES
     ('PA784063', '2017-05-07 13:31:15',  3477742, 'SHS 60 Easy Buy Bungoma', 100, 'f'),
     ('PA965171', '2017-05-31 17:56:39',  3477742, 'SHS 60 Easy Buy Bungoma', 50, 'f')
     ;
-
+```
 ### -- /TASK 1. Write a query to list count of unique accounts by group_name/
 
 ### -- /TASK 2. accounts table has the amount to be paid to unlock every
